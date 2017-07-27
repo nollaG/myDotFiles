@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
   export GOPATH="$HOME/Projects/goproj"
   export GOROOT="/usr/local/go"
   export LLVMROOT="/usr/local/Cellar/llvm/3.9.0"
+  export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 # --}}
 # Options {{--
   umask 077

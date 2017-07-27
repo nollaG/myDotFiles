@@ -130,7 +130,7 @@
   let g:xml_syntax_folding=1
   set foldmethod=syntax
   "set foldmethod=indent   "fold based on indent
-  set foldnestmax=10       "deepest fold is 3 levels
+  "set foldnestmax=10       "deepest fold is 3 levels
   "set nofoldenable
   "nnoremap <space> za
 " }

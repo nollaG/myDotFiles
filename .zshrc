@@ -2,7 +2,7 @@
 #http://wiki.ms.com/NBUeng/TerminalSetup
 # Oh-my-zsh {{--
 export ZSH=/Users/Jialun/.oh-my-zsh
-plugins=(git golang tmux rust)
+plugins=(git golang tmux rust brew)
 source $ZSH/oh-my-zsh.sh
 # --}}
 # Hist {{--
@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
   export SHELL=`which zsh`
   export GOPATH="$HOME/Projects/goproj"
   export GOROOT="/usr/local/go"
-  export LLVMROOT="/usr/local/Cellar/llvm/3.9.0"
+  export LLVMROOT="/usr/local/opt/llvm"
   export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 # --}}
 # Options {{--
@@ -229,7 +229,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Prompt {{--
-PROMPT='%{$fg[yellow]%}%n%f %{$fg[magenta]%}%3c 
+PROMPT='%{$fg[yellow]%}%n@%m %{$fg[magenta]%}%3c%{$fg[green]%}$(__git_ps1 " (%s)")
 ${vim_mode} %{$fg[red]%}>%{$fg[green]%}>%{$fg[blue]%}> %{$reset_color%}'
 # --}}
 
@@ -239,4 +239,5 @@ path=($LLVMROOT/bin $HOME/bin $GOPATH/bin $path)
 # fzf {{--
 source ~/.zsh/functions/fzf/completion.zsh
 source ~/.zsh/functions/fzf/key-bindings.zsh
+source ~/.zsh/functions/git-prompt.zsh
 # --}}

@@ -1,15 +1,9 @@
 [core]
 	excludesfile = /Users/Jialun/.gitignore_global
 	editor = vim
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
-	name = pycq2002
-	email = pycq2002@gmail.com
+	name = Jialun Bian
+	email = Jialun.Bian@outlook.com
 [alias]
 	st = status
 	co = checkout

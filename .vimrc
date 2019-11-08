@@ -6,7 +6,6 @@
   call plug#begin('~/.vim/plugged')
 
   Plug 'vim-airline/vim-airline'
-  Plug 'tpope/vim-surround'
   Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
   Plug 'vim-scripts/a.vim'
   Plug 'jiangmiao/auto-pairs'
@@ -80,6 +79,9 @@
   let g:ctrlp_cmd='CtrlP'
   let g:ctrlp_working_path_mode='ra'
   let g:ctrlp_by_filename=1
+  nnoremap <Leader>fu :CtrlPFunky<Cr>
+  " narrow the list down with a word under cursor
+  nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
   set wildignore+=*/install/*,mk,mk50,mk51,mk50m,mk51m
 
   "ack-ag
@@ -128,7 +130,7 @@
 " }
 " Fold {
   let g:xml_syntax_folding=1
-  set foldmethod=syntax
+  "set foldmethod=syntax
   "set foldmethod=indent   "fold based on indent
   "set foldnestmax=10       "deepest fold is 3 levels
   "set nofoldenable
@@ -154,12 +156,16 @@
   set ignorecase "ig case when searching
   set hlsearch "highlight search
   set incsearch "increasing search You know it!
-  nnoremap n nzz
-  nnoremap N Nzz
+  "nnoremap n nzz
+  "nnoremap N Nzz
   set showmatch "show the brackets matches
   let g:rehash256 = 1
   set t_Co=256 "make the colorscheme more beautiful
   set background=dark "I like it
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+	let g:jellybeans_use_term_italics = 1
   colorscheme jellybeans
   "colorscheme xoria256
   "colorscheme molokai
@@ -173,7 +179,7 @@
   set backspace=indent,eol,start
   set termencoding=utf-8
   set encoding=utf-8
-  set shell=/bin/sh
+  set shell=/bin/bash
   "set tw=78 "auto new line
   set autoread "reload the file when changed
   set ffs=unix,dos,mac
